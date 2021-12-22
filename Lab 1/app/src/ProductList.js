@@ -39,7 +39,11 @@ function increaseVotyBy1(id){
 }
 
 function ProductList(){
-    let newProductList = Products;
+
+    // Make a copy of the data
+    let newProductList = [].concat(Products);
+
+    // Sort the copied data
     newProductList.sort((a,b)=>b.upVotes-a.upVotes);
 
     newProductList = Products.map(
