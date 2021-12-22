@@ -1,4 +1,9 @@
 function Product(props){
+
+    function voteHandler(e){
+        console.log("Clicked", props.id);
+    }
+
     return (
         <div className="product-card">
             <div className="product-image" >
@@ -6,12 +11,12 @@ function Product(props){
             </div>
             
             <div className="product-info">
-                <img src="upArrow.png" height={40} onClick={()=>{console.log("Clicked")}}></img>
+                <img src="upArrow.png" height={40} onClick={voteHandler}></img>
                 <h2>{props.upVotes}</h2>
       
                 
                 <h4>{props.name}</h4>
-                <p>{props.desc}r</p>
+                <p>{props.desc}</p>
             </div>
 
         </div>
