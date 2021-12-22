@@ -1,10 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+
+import ProductList from './ProductList';
 
 function App() {
   return (
     <div className="App">
-      <h1>This is working</h1>
+      <h1>Popular Products</h1>
+
+      <ProductList /> 
     </div>
   );
 }

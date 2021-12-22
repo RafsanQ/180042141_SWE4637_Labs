@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.product-card {
+  float: left;
+  margin: 1%;
+  height: 30px;
+  flex-direction: column;
+}
+
+.product-image {
+  float: left;
+  margin: 1%;
+}
+
+.product-info {
+  align-items: baseline;
+}
