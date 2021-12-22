@@ -2,13 +2,16 @@ function Product(props){
     return (
         <div className="product-card">
             <div className="product-image" >
-               <img src="product1.jpg"></img> 
+               <img src={props.img} height={200}></img> 
             </div>
             
             <div className="product-info">
-                <h3>upvotes</h3>
-                <h3>Name</h3>
-                <p>Product Info for</p>
+                <img src="upArrow.png" height={40} onClick={()=>{console.log("Clicked")}}></img>
+                <h2>{props.upVotes}</h2>
+      
+                
+                <h4>{props.name}</h4>
+                <p>{props.desc}r</p>
             </div>
 
         </div>

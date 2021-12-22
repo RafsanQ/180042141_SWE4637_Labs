@@ -45,7 +45,7 @@
 .product-card {
   float: left;
   margin: 1%;
-  display: flex;
+  display: inline-flex;
 }
 
 .product-image {
@@ -55,6 +55,7 @@
 }
 
 .product-info {
-  float: top;
-  display: block;
+  text-align: center;
+  display: inline-flex; 
+
 }
