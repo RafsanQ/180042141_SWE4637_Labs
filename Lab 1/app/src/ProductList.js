@@ -45,6 +45,25 @@ function ProductList(){
         newProducts[id-1].upVotes++;
         console.log("Updated. Votes=", Products[id-1].upVotes);
         setProducts(newProducts);
+        updateList();
+    }
+
+    function updateList(){
+        // Make a copy of the data
+        let newProductList = [].concat(Products);
+
+        // Sort the copied data
+        newProductList.sort((a,b)=>b.upVotes-a.upVotes);
+
+        newProductList = newProductList.map(
+            item => <Product name={item.name} upVotes={item.upVotes} desc={item.desc} img={item.img} id={item.id} upVoteFunction={increaseVotyBy1} />
+        )
+
+        return (
+            <div className='product-list'>
+                {newProductList}
+            </div>
+        )
     }
 
     // Make a copy of the data
@@ -53,7 +72,9 @@ function ProductList(){
     // Sort the copied data
     newProductList.sort((a,b)=>b.upVotes-a.upVotes);
 
-    newProductList = Products.map(
+
+
+    newProductList = newProductList.map(
         item => <Product name={item.name} upVotes={item.upVotes} desc={item.desc} img={item.img} id={item.id} upVoteFunction={increaseVotyBy1} />
     )
 
@@ -62,6 +83,7 @@ function ProductList(){
             {newProductList}
         </div>
     )
+    
 }
 
 export default ProductList;
