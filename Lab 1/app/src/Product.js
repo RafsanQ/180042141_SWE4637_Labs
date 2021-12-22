@@ -1,7 +1,11 @@
+import {useState} from 'react';
+
 function Product(props){
 
     function voteHandler(e){
         console.log("Clicked", props.id);
+        props.upVoteFunction(props.id);
+        
     }
 
     return (

@@ -31,12 +31,22 @@ let Products = [
         desc: "High-minded or not? You decide.",
         img: "product4.jpg"
     }
-]
+];
 
-function PorductList(){
+function increaseVotyBy1(id){
+    Products[id-1].upVotes++;
+    console.log("Updated. Votes=", Products[id-1].upVotes);
+}
 
-    const newProductList = Products.map(
-        item => <Product name={item.name} upVotes={item.upVotes} desc={item.desc} img={item.img} id={item.id} />
+function ProductList(){
+    let newProductList = Products;
+    
+    newProductList.sort((a,b)=>{
+        a.upVotes >= b.upVotes ? 1:-1;
+    });
+
+    newProductList = Products.map(
+        item => <Product name={item.name} upVotes={item.upVotes} desc={item.desc} img={item.img} id={item.id} upVoteFunction={increaseVotyBy1} />
     )
 
     return (
@@ -46,4 +56,4 @@ function PorductList(){
     )
 }
 
-export default PorductList;
+export default ProductList;
