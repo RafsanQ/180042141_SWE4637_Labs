@@ -1,5 +1,3 @@
-import {useState} from 'react';
-
 function Product(props){
 
     function voteHandler(e){

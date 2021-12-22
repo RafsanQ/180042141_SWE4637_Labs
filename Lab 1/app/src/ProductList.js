@@ -40,10 +40,7 @@ function increaseVotyBy1(id){
 
 function ProductList(){
     let newProductList = Products;
-    
-    newProductList.sort((a,b)=>{
-        a.upVotes >= b.upVotes ? 1:-1;
-    });
+    newProductList.sort((a,b)=>a.upVotes-b.upVotes);
 
     newProductList = Products.map(
         item => <Product name={item.name} upVotes={item.upVotes} desc={item.desc} img={item.img} id={item.id} upVoteFunction={increaseVotyBy1} />
