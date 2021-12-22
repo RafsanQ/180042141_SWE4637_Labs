@@ -37,18 +37,24 @@
   }
 }
 
+.product-list {
+  align-items: left;
+  display: inline-block;
+}
+
 .product-card {
   float: left;
   margin: 1%;
-  height: 30px;
-  flex-direction: column;
+  display: flex;
 }
 
 .product-image {
   float: left;
   margin: 1%;
+  width: 250px;
 }
 
 .product-info {
-  align-items: baseline;
+  float: top;
+  display: block;
 }
