@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 
 import Product from './Product'
 
@@ -33,12 +34,18 @@ let Products = [
     }
 ];
 
-function increaseVotyBy1(id){
-    Products[id-1].upVotes++;
-    console.log("Updated. Votes=", Products[id-1].upVotes);
-}
+
 
 function ProductList(){
+
+    const [products, setProducts] = useState(Products);
+
+    function increaseVotyBy1(id){
+        let newProducts = [].concat(products);
+        newProducts[id-1].upVotes++;
+        console.log("Updated. Votes=", Products[id-1].upVotes);
+        setProducts(newProducts);
+    }
 
     // Make a copy of the data
     let newProductList = [].concat(Products);
