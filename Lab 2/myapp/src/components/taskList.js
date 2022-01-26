@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react/cjs/react.development";
 import { Task } from "./task";
 import { AddTask } from "./addTask";
-import { Timer } from "./timer";
+import Timer from "./timer";
+
 
 export const TaskList = ({ data }) => {
   const [taskList, setTaskList] = useState(data);

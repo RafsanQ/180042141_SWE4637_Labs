@@ -27,7 +27,7 @@ export const AddTaskForm = ({ addTask }) => {
       />
       <div>
         <button onClick={createTask}>Create</button>
-        <button >Cancel</button>
+        <button>Cancel</button>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export const Task = (props) => {
           taskName={task.name}
           taskCategory={task.category}
           updateTask={updateTask}
-          setIsEditing={setIsEditing}
+          setEditTaskForm={setIsEditing}
         />
       ) : (
         <div>
