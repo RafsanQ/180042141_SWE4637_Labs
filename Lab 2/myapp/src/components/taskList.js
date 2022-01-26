@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
 import { Task } from "./task";
+import { AddTask } from "./addTask";
 
 export const TaskList = ({ data }) => {
   const [taskList, setTaskList] = useState(data);
@@ -20,3 +21,6 @@ export const TaskList = ({ data }) => {
     </div>
   );
 };
+
+
+export default TaskList;

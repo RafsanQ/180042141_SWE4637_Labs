@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
+import EditTaskForm from "./editTaskForm";
 
 
 export const Task = (props) => {
@@ -50,3 +51,5 @@ export const Task = (props) => {
     </>
   );
 };
+
+export default Task;
