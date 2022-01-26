@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
 import EditTaskForm from "./editTaskForm";
-import { Timer } from "./timer";
+
 
 
 export const Task = (props) => {
@@ -10,7 +10,7 @@ export const Task = (props) => {
 
 
   const updateTask = ({ name, category }) => {
-    setTask({ ...task, name: name, category: category });
+    setTask({ name: name, category: category });
     setIsEditing(false);
   };
 
@@ -26,18 +26,16 @@ export const Task = (props) => {
       ) : (
         <div>
           <div>
-            <p>{task?.name}</p>
-            <p>{task?.category}</p>
+            <p>Name: <b>{task.name}</b></p>
+            <p>Category: <b>{task.category}</b></p>
             <div>
               <button onClick={() => setIsEditing(true)}>Edit</button>
-              <button onClick={() => props.removeTask(props.index)}>Remove</button>
+              <button onClick={() => props.removeTask(props.index+1)}>Remove</button>
             </div>
           </div>
 
          
-          <div>
-            <Timer props_time={task?.time} />
-          </div>
+          
         </div>
       )}
     </>
