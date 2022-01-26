@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import TaskList from './components/taskList.js';
+import Tasks from './resources/data';
 
 function App() {
   return (
     <div>
-      <TaskList/>
+      <TaskList data={Tasks}/>
     </div>
   );
 }

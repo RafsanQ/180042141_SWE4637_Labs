@@ -7,7 +7,7 @@ export const EditTaskForm = ({ taskName, taskCategory, updateTask, setEditTaskFo
   const [category, setCategory] = useState(taskCategory);
 
   return (
-    <div className="edit-task-form">
+    <div>
       <TaskForm
         name={name}
         category={category}
@@ -15,14 +15,11 @@ export const EditTaskForm = ({ taskName, taskCategory, updateTask, setEditTaskFo
         setCategory={setCategory}
       />
 
-      <div className="form-buttons">
-        <button
-          id="edit-task-button"
-          onClick={() => updateTask({ name: name, category: category })}
-        >
+      <div>
+        <button id="edit-task-button" onClick={() => updateTask({ name: name, category: category })}>
           Update
         </button>
-        <button className="cancel-button" onClick={() => setEditTaskForm(false)}>
+        <button onClick={() => setEditTaskForm(false)}>
           Cancel
         </button>
       </div>

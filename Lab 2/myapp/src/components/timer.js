@@ -27,16 +27,13 @@ export const Timer = ({ props_time }) => {
   return (
     <>
       <p>
-        <span>{hour}</span> :
-        <span>{minute}</span> :
-        <span>{second}</span>
+        <span>{hour}</span> : <span>{minute}</span> : <span>{second}</span>
       </p>
-      <button
-        className={`timer-button ${isActive ? "stop-button" : "start-button"} `}
-        onClick={() => toogleActive()}
-      >
+      <button onClick={() => toogleActive()}>
           {isActive ? "Stop" : "Start"}
       </button>
     </>
   );
 };
+
+export default Timer;

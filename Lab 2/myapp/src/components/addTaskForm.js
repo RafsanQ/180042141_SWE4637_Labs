@@ -25,9 +25,9 @@ export const AddTaskForm = ({ addTask }) => {
         setName={setName}
         setCategory={setCategory}
       />
-      <div className="form-buttons">
-        <button id="create-task-button"onClick={() => createTask()}>Create</button>
-        <button  className="cancel-button">Cancel</button>
+      <div>
+        <button onClick={createTask}>Create</button>
+        <button >Cancel</button>
       </div>
     </div>
   );
